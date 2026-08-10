@@ -1,9 +1,10 @@
 import { registerAs } from '@nestjs/config';
 
 export const databaseConfig = registerAs('database', () => ({
-  host: process.env.DB_HOST,
-  port: parseInt(process.env.DB_PORT || '5432', 10),
-  user: process.env.DB_USERNAME,
-  pass: process.env.DB_PASSWORD,
-  name: process.env.DB_DATABASE,
+  // host: process.env.DATABASE_HOST,
+  // port: parseInt(process.env.DATABASE_PORT || '5432', 10),
+  // user: process.env.DATABASE_USERNAME,
+  // pass: process.env.DATABASE_PASSWORD,
+  // name: process.env.DATABASE_NAME,
+  url: process.env.DATABASE_URL,
 }));
